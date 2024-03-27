@@ -55,14 +55,7 @@ const App = () => {
         <Loading />
       ) : (
         <>
-          <PostList
-            Post={Post}
-            startIndex={startIndex}
-            lastIndex={lastIndex}
-            isLoading={isLoading}
-            error={error}
-            onRetry={retryFetch}
-          />
+          <PostList Post={Post} startIndex={startIndex} lastIndex={lastIndex} />
           <Pagination
             page={page}
             setPage={setPage}
