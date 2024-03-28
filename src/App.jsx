@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import PostList from "./component/PostList";
 import axios from "axios";
-import { TotalItem } from "./config/TotlaItem";
+import { TotalItem, storedPage } from "./config/TotlaItem";
 import Pagination from "./component/Pagination";
 import styled from "styled-components";
 import Loading from "./component/Loading";
 
 const App = () => {
   const [Post, setPost] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(storedPage || 1);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -64,7 +64,7 @@ const App = () => {
           <Pagination
             page={page}
             setPage={setPage}
-            Post={Post}
+            posts={Post}
             isLoading={isLoading}
           />
         </>
