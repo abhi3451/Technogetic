@@ -40,11 +40,16 @@ const App = () => {
     fetchPosts();
   };
 
+  {
+    /* Error handling in Parent Component */
+  }
+
   if (error) {
     return (
       <ErrorContainer>
-        <p>Error: {error}</p>
+        <p>Error: {error}</p> {/*show error if api request fails*/}
         <Button onClick={() => retryFetch()}>Try Again</Button>
+        {/* Try again but to re-fetch the API data*/}
       </ErrorContainer>
     );
   }

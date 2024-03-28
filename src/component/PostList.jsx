@@ -31,26 +31,32 @@ const PostList = ({ Post, startIndex, lastIndex }) => {
 export default PostList;
 
 const ResponsiveTableWrapper = styled.div`
-  display: flex;
   width: 100%;
-
-  color: white;
   overflow-x: auto;
+  padding: auto;
 `;
 
 const ResponsiveTable = styled.table`
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
+  border-radius: 5px;
 `;
 
 const ResponsiveTh = styled.th`
-  margin: 0 auto;
-  padding: 8px;
+  padding: 12px;
   text-align: center;
+  background-color: #f2f2f2;
+
+  border-bottom: 2px solid #ddd;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
 `;
 
 const ResponsiveTd = styled.td`
-  padding: 8px;
+  padding: 12px;
+  text-align: center;
+
   border-bottom: 1px solid #ddd;
+  color: #d3d3d3;
 `;
