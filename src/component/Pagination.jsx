@@ -83,6 +83,9 @@ const PageNumber = styled.div`
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &:hover {
     background-color: ${({ isActive }) => (isActive ? "#5a67d8" : "#e5e7eb")};
